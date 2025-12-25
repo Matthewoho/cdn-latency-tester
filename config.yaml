@@ -1,0 +1,41 @@
+# CDN 延迟测试配置文件
+# 请根据实际情况修改以下配置
+
+# 测试目标
+domain: "example.com"     # 测试域名
+path: "/api/health"       # API 路径
+
+# 测试参数
+test_count: 100           # 每个节点测试次数
+timeout: "30s"            # 请求超时时间
+interval: "100ms"         # 请求间隔，避免限流
+
+# CDN 节点配置
+# protocol 可选值: HTTP/1.1, HTTP/2, HTTP/3
+endpoints:
+  - name: "CDN-A"
+    ip: "1.2.3.4"
+    protocol: "HTTP/3"
+  
+  - name: "CDN-A"
+    ip: "1.2.3.4"
+    protocol: "HTTP/2"
+  
+  - name: "CDN-A"
+    ip: "1.2.3.4"
+    protocol: "HTTP/1.1"
+  
+  - name: "CDN-B"
+    ip: "5.6.7.8"
+    protocol: "HTTP/2"
+  
+  - name: "CDN-B"
+    ip: "5.6.7.8"
+    protocol: "HTTP/1.1"
+
+# 输出配置
+output:
+  dir: "./output"         # 输出目录
+  enable_log: true        # 启用日志
+  enable_json: true       # 生成 JSON 报告
+  enable_html: true       # 生成 HTML 报告

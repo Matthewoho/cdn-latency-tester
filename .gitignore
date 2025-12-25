@@ -1,0 +1,15 @@
+# 编译产物
+cdn-test
+*.exe
+
+# 测试输出
+output/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 系统文件
+.DS_Store
+Thumbs.db
