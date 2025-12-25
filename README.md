@@ -1,4 +1,4 @@
-<img width="1427" height="1738" alt="img_v3_02t9_d38e6ed6-5d06-4085-b9d3-83e454e5b7hu" src="https://github.com/user-attachments/assets/c476edf7-7ca9-4623-930c-aed967378b69" /># CDN 延迟测试工具
+# CDN 延迟测试工具
 
 一个用于对比测试不同 CDN 节点在不同协议（HTTP/1.1, HTTP/2, HTTP/3）下延迟性能的 Go 工具。
 
